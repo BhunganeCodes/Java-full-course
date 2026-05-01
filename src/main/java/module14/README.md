@@ -13,10 +13,10 @@ In this module, you will:
 ---
 
 ## 🎥 Video Sections
-first: 
-https://youtu.be/c13XxZgUVj0
-second: 
-https://youtu.be/MshSvgwBmU4
+ 
+* https://youtu.be/c13XxZgUVj0
+
+* https://youtu.be/MshSvgwBmU4
 
 ### ⏱ Watch:
 
