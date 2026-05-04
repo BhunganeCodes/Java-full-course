@@ -4,12 +4,27 @@ public class LoopExercises {
 
     // Exercise 1
     public static int exercise1_guessingGame(int[] guesses, int secret) {
-        return 0;
+        int count = 0;
+        for (int i : guesses) {
+            count++;
+            if (i == secret) break;
+        }
+        return count;
     }
 
     // Exercise 2
     public static int exercise2_pinValidator(int[] pins) {
-        return 0;
+        int result = 1;
+        int idx = 0;
+
+        do {
+            if (pins[idx] != 1234) {
+                idx++;
+                result++;
+            }
+        } while (pins[idx] != 1234);
+
+        return result;
     }
 
     // Exercise 3
