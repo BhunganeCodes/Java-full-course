@@ -4,12 +4,13 @@
 
 ## Learning Outcomes Assessed
 
-* Decision Making
 * Conditional Logic
+* Decision Making in Programs
 * Comparison Operators
-* String Formatting
-* Boundary Testing
-* Problem Solving
+* Boolean Expressions
+* Boundary Handling
+* String Output Formatting
+* Basic Problem Decomposition
 
 ---
 
@@ -19,7 +20,7 @@ This module contains:
 
 ### Coding Practice:
 
-All questions must be completed inside:
+Complete all functions inside:
 
 ```java
 ConditionExercises.java
@@ -27,11 +28,11 @@ ConditionExercises.java
 
 Your task is to:
 
-* Read each function carefully
-* Understand what the function is asking
+* Read each function specification carefully
 * Apply correct conditional logic
-* Follow exact return formats
-* Pass all tests successfully
+* Handle all edge cases
+* Return exact expected outputs
+* Pass all unit tests successfully
 
 ---
 
@@ -41,9 +42,10 @@ For each function:
 
 * Use valid Java syntax
 * Apply `if`, `else if`, and `else` correctly
-* Handle all edge cases
-* Return exact required outputs
-* Follow formatting instructions precisely
+* Use comparison operators appropriately
+* Ensure boundary conditions are handled correctly
+* Return outputs in the exact required format
+* Avoid extra spaces or incorrect wording
 * Ensure all unit tests pass
 
 ---
@@ -70,11 +72,11 @@ mvn test -Dtest=ConditionExercisesTest
 
 ## `if` Statement
 
-Used when code should only execute if a condition is true.
+Used when a block of code should only execute if a condition is true.
 
 ```java
 if (condition) {
-    // code runs
+    // executes when condition is true
 }
 ```
 
@@ -82,7 +84,7 @@ if (condition) {
 
 ## `if / else`
 
-Used when there are two possible outcomes.
+Used when there are exactly two possible outcomes.
 
 ```java
 if (condition) {
@@ -96,15 +98,15 @@ if (condition) {
 
 ## `if / else if / else`
 
-Used when multiple conditions must be evaluated.
+Used when multiple conditions must be evaluated in order.
 
 ```java
 if (condition1) {
-    // first condition
+    // first case
 } else if (condition2) {
-    // second condition
+    // second case
 } else {
-    // default
+    // fallback case
 }
 ```
 
@@ -114,28 +116,16 @@ if (condition1) {
 
 | Operator | Meaning               |
 | -------- | --------------------- |
-| `>`      | Greater than          |
-| `<`      | Less than             |
-| `>=`     | Greater than or equal |
-| `<=`     | Less than or equal    |
-| `==`     | Equal                 |
-| `!=`     | Not equal             |
+| `>`      | greater than          |
+| `<`      | less than             |
+| `>=`     | greater than or equal |
+| `<=`     | less than or equal    |
+| `==`     | equal                 |
+| `!=`     | not equal             |
 
 ---
 
-# 🧪 Fundamentals Coding Practice
-
----
-
-## Project Structure
-
-```plaintext
-module02/
-├── ConditionExercises.java
-├── tests/
-│   └── ConditionExercisesTest.java
-└── README.md
-```
+# 🧪 Exercises
 
 ---
 
@@ -147,50 +137,19 @@ module02/
 exercise1_temperatureAlert(int temperature)
 ```
 
-### Detailed Objective:
+### Description:
 
-Determine whether a temperature reading is considered hot.
+Determine whether a temperature value is considered hot based on a fixed threshold.
 
 ### Rules:
 
-* If temperature is above 30°C:
+* If temperature is greater than 30 → return `"It's hot!"`
+* Otherwise → return `"It's not hot."`
 
-```java
-"It's hot!"
-```
+### Constraints:
 
-* Otherwise:
-
-```java
-"It's not hot."
-```
-
----
-
-### Input:
-
-* Integer temperature
-
-### Output:
-
-* String message
-
----
-
-### Examples:
-
-| Input | Output          |
-| ----- | --------------- |
-| 25    | "It's not hot." |
-| 30    | "It's not hot." |
-| 35    | "It's hot!"     |
-
----
-
-### Edge Cases:
-
-* Exactly 30 is NOT hot
-* Negative temperatures are not hot
+* Boundary value 30 is NOT considered hot
+* Output must match exactly
 
 ---
 
@@ -202,50 +161,19 @@ Determine whether a temperature reading is considered hot.
 exercise2_ageVerification(int age)
 ```
 
-### Detailed Objective:
+### Description:
 
-Verify whether a user meets the minimum age requirement.
+Determine whether a user meets the minimum age requirement.
 
 ### Rules:
 
-* Age 18 or older:
+* If age is 18 or above → return `"Access granted"`
+* Otherwise → return `"Access denied"`
 
-```java
-"Access granted"
-```
+### Constraints:
 
-* Otherwise:
-
-```java
-"Access denied"
-```
-
----
-
-### Input:
-
-* Integer age
-
-### Output:
-
-* String access result
-
----
-
-### Examples:
-
-| Input | Output           |
-| ----- | ---------------- |
-| 17    | "Access denied"  |
-| 18    | "Access granted" |
-| 25    | "Access granted" |
-
----
-
-### Edge Cases:
-
-* Exactly 18 grants access
-* Negative values deny access
+* Age 18 is valid
+* Negative values must be denied
 
 ---
 
@@ -257,52 +185,23 @@ Verify whether a user meets the minimum age requirement.
 exercise3_evenOrOdd(int number)
 ```
 
-### Detailed Objective:
+### Description:
 
 Determine whether a number is even or odd.
 
 ### Rules:
 
-* Even:
+* If number is divisible by 2 → `"X is even"`
+* Otherwise → `"X is odd"`
 
-```java
-"X is even"
-```
-
-* Odd:
-
-```java
-"X is odd"
-```
-
-(`X` represents the actual number)
+Where `X` is the input number.
 
 ---
 
-### Input:
+### Constraints:
 
-* Integer number
-
-### Output:
-
-* Formatted string
-
----
-
-### Examples:
-
-| Input | Output      |
-| ----- | ----------- |
-| 4     | "4 is even" |
-| 7     | "7 is odd"  |
-| 0     | "0 is even" |
-
----
-
-### Edge Cases:
-
-* Zero is even
-* Negative numbers can be even or odd
+* Zero is considered even
+* Negative numbers are valid inputs
 
 ---
 
@@ -314,51 +213,28 @@ Determine whether a number is even or odd.
 exercise4_discountCalculator(double price)
 ```
 
-### Detailed Objective:
+### Description:
 
-Calculate discount percentage based on purchase amount.
+Apply a discount based on purchase amount and calculate final price.
 
 ### Rules:
 
-* Above 1000 → 20%
-* Between 500 and 1000 → 10%
-* Below 500 → 0%
-
----
+* price > 1000 → 20% discount
+* 500 to 1000 → 10% discount
+* less than 500 → 0% discount
 
 ### Output Format:
 
-```java
+```
 Discount: X%, Final price: RXXXX.XX
 ```
 
 ---
 
-### Input:
+### Constraints:
 
-* Double price
-
-### Output:
-
-* Formatted pricing string
-
----
-
-### Examples:
-
-| Input | Output                              |
-| ----- | ----------------------------------- |
-| 1200  | Discount: 20%, Final price: R960.00 |
-| 750   | Discount: 10%, Final price: R675.00 |
-| 300   | Discount: 0%, Final price: R300.00  |
-
----
-
-### Edge Cases:
-
-* 500 gets 10%
-* 1000 gets 10%
-* Correct currency formatting required
+* 500 and 1000 are included in the 10% category
+* Final price must be formatted to 2 decimal places
 
 ---
 
@@ -370,56 +246,21 @@ Discount: X%, Final price: RXXXX.XX
 exercise5_weatherAdvisor(int temperature)
 ```
 
-### Detailed Objective:
+### Description:
 
-Categorize weather conditions based on temperature.
+Classify weather conditions based on temperature ranges.
 
 ### Rules:
 
-* Above 30:
-
-```java
-"It's hot!"
-```
-
-* 15 to 30:
-
-```java
-"It's mild."
-```
-
-* Below 15:
-
-```java
-"It's cold."
-```
+* temperature > 30 → `"It's hot!"`
+* 15 to 30 → `"It's mild."`
+* below 15 → `"It's cold."`
 
 ---
 
-### Input:
+### Constraints:
 
-* Integer temperature
-
-### Output:
-
-* Weather description string
-
----
-
-### Examples:
-
-| Input | Output       |
-| ----- | ------------ |
-| 35    | "It's hot!"  |
-| 20    | "It's mild." |
-| 10    | "It's cold." |
-
----
-
-### Edge Cases:
-
-* 15 = mild
-* 30 = mild
+* 15 and 30 are included in mild range
 
 ---
 
@@ -431,67 +272,33 @@ Categorize weather conditions based on temperature.
 exercise6_ageGroup(int age)
 ```
 
-### Detailed Objective:
+### Description:
 
-Categorize individuals into age groups.
+Categorize a person into an age group.
 
 ### Rules:
 
-* Under 13:
-
-```java
-"Child"
-```
-
-* 13 to 19:
-
-```java
-"Teen"
-```
-
-* 20 and above:
-
-```java
-"Adult"
-```
+* age < 13 → `"Child"`
+* 13 to 19 → `"Teen"`
+* 20 and above → `"Adult"`
 
 ---
 
-### Input:
+### Constraints:
 
-* Integer age
-
-### Output:
-
-* Category string
-
----
-
-### Examples:
-
-| Input | Output  |
-| ----- | ------- |
-| 10    | "Child" |
-| 15    | "Teen"  |
-| 25    | "Adult" |
-
----
-
-### Edge Cases:
-
-* 13 = Teen
-* 19 = Teen
-* 20 = Adult
+* 13 and 19 are included in Teen category
+* 20 starts Adult category
 
 ---
 
 # 💡 Key Developer Tips
 
-* Pay close attention to boundaries
-* Be precise with comparison operators
-* Follow exact output formatting
-* Use `String.format()` when necessary
-* Test all edge cases carefully
+* Always check boundary conditions carefully
+* Use correct comparison operators
+* Match output strings exactly
+* Avoid extra spaces or formatting errors
+* Test edge cases explicitly
+* Follow condition order carefully
 
 ---
 
@@ -499,18 +306,8 @@ Categorize individuals into age groups.
 
 By completing this module, you should:
 
-* Build strong decision-making logic
-* Understand branching conditions thoroughly
-* Handle multiple outcomes confidently
-* Improve debugging precision
-* Strengthen real-world programming ability
-
----
-
-# 🏆 Success Mindset
-
-Conditional logic forms the backbone of intelligent software.
-
-From security systems to weather apps to robotics, software constantly makes decisions.
-
-Master conditionals thoroughly before progressing.
+* Write correct conditional logic
+* Handle multiple decision paths
+* Understand boundary-sensitive logic
+* Produce accurate program outputs
+* Build strong foundational programming discipline
