@@ -2,1858 +2,275 @@
 
 ---
 
-## Learning Outcomes Assessed
+## 🎯 Learning Objectives
 
-* Exception Handling
-* Defensive Programming
-* Try-Catch Logic
-* Runtime Error Prevention
-* File Writing
-* File Reading
-* File Processing
-* Resource Management
-* Java I/O
-* Robust Software Development
+In this module, you will:
+
+- Understand how exceptions occur in Java programs  
+- Learn how to prevent program crashes using `try-catch`  
+- Work with safe input parsing  
+- Read data from external files  
+- Write data into files  
+- Build robust, fault-tolerant applications  
+- Handle real-world runtime errors gracefully  
 
 ---
 
-## Module Structure
+## 🎥 Learning Resources
+
+https://youtu.be/xTtL8E4LzTQ  
+https://youtu.be/pJNUDXzmBCE?si=zGn9KfVBO9VDtM9I  
+
+### ⏱ Watch These Sections:
+
+- Exception Handling → 09:05:29 → 09:13:28  
+- File Writing → 09:13:28 → 09:21:58  
+- File Reading → 09:21:58 → 09:30:00  
+- Collections/Review → 5 min video above  
+
+---
+
+## 📚 Learning Outcomes Assessed
+
+- Exception Handling  
+- Try-Catch Logic  
+- Defensive Programming  
+- Input Validation  
+- File Writing  
+- File Reading  
+- Resource Management  
+- Data Parsing  
+- Robust System Design  
+
+---
+
+## 🛠 Module Structure
 
 This module contains:
 
 ### Coding Practice:
 
-Complete all functions inside:
-
-```java
-FileExercises.java
-```
-
----
-
-## Your Task
-
-For this module, you must:
-
-* Safely handle runtime errors
-* Prevent program crashes
-* Work with external files
-* Read and write file data
-* Manage invalid input
-* Return exact outputs
-* Use proper Java exception handling
-* Pass all tests successfully
-
----
-
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-* Use `try-catch` correctly
-* Handle failures gracefully
-* Prevent crashes
-* Work with files safely
-* Follow exact return requirements
-* Ensure all unit tests pass
-
----
-
-## How to Run Your Tests
-
-### Run all tests:
-
-```bash
-mvn test
-```
-
-### Run module tests:
-
-```bash
-mvn test -Dtest=FileExercisesTest
-```
-
----
-
-# 🧠 Core Java Reliability Concepts
-
----
-
-# 🔹 What Are Exceptions?
-
-Exceptions are runtime errors that interrupt normal program execution.
-
----
-
-### Common Examples:
-
-* Division by zero
-* Invalid number conversion
-* Missing files
-* Permission errors
-
----
-
-### Without handling:
-
-Your program crashes.
-
----
-
-### With handling:
-
-Your program safely recovers.
-
----
-
-# 🔹 Why Exception Handling Matters
-
-Professional software must:
-
-* Avoid crashes
-* Recover from bad input
-* Handle missing resources
-* Protect user experience
-* Log failures safely
-
----
-
-### Real-World Examples:
-
-* User enters invalid number
-* Server file missing
-* Customer uploads corrupted data
-* API receives malformed request
-
----
-
-# 🔹 try-catch Structure
-
-```java
-try {
-    // risky code
-} catch (Exception e) {
-    // fallback behavior
-}
-```
-
----
-
-### Purpose:
-
-Allows code to continue safely.
-
----
-
-# 🔹 File I/O
-
-File Input/Output allows programs to:
-
-* Save user data
-* Read configurations
-* Process logs
-* Store reports
-* Persist information
-
----
-
-# 🧪 Project Structure
-
-```plaintext
-module12/
-├── FileExercises.java
-├── tests/
-│   └── FileExercisesTest.java
-└── README.md
-```
-
----
-
-# Question 1 - Safe Division
-
-## Function:
-
-```java
-exercise1_safeDivide(int a, int b)
-```
-
----
-
-### # 📘 Module 12: Exception Handling & File I/O
-
----
-
-## Learning Outcomes Assessed
-
-* Exception Handling
-
-* Defensive Programming
-
-* Try-Catch Logic
-
-* Runtime Error Prevention
-
-* File Writing
-
-* File Reading
-
-* File Processing
-
-* Resource Management
-
-* Java I/O
-
-* Robust Software Development
-
----
-
-## Module Structure
-
-This module contains:
-
-### Coding Practice:
-
-Complete all functions inside:
-
-```java id="v4m8qx"
+Complete all methods inside:
 
 FileExercises.java
 
-```
-
 ---
 
-## Your Task
+## ✅ What You Must Do
 
 For this module, you must:
 
-* Safely handle runtime errors
+- Understand how runtime errors occur  
+- Prevent program crashes using exception handling  
+- Safely convert and validate input  
+- Read and write files correctly  
+- Handle missing or invalid data  
+- Return exact expected outputs  
+- Follow Java best practices  
+- Pass all unit tests  
 
-* Prevent program crashes
-
-* Work with external files
-
-* Read and write file data
-
-* Manage invalid input
-
-* Return exact outputs
-
-* Use proper Java exception handling
-
-* Pass all tests successfully
-
----
-
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-
-* Use `try-catch` correctly
-
-* Handle failures gracefully
-
-* Prevent crashes
-
-* Work with files safely
-
-* Follow exact return requirements
-
-* Ensure all unit tests pass
-
----
-
-## How to Run Your Tests
-
-### Run all tests:
-
-```bash id="n8v3pk"
-
-mvn test
-
-```
-
-### Run module tests:
-
-```bash id="x2m7qt"
-
-mvn test -Dtest=FileExercisesTest
-
-```
-
----
-
-# 🧠 Core Java Reliability Concepts
-
----
-
-# 🔹 What Are Exceptions?
-
-Exceptions are runtime errors that interrupt normal program execution.
-
----
-
-### Common Examples:
-
-* Division by zero
-
-* Invalid number conversion
-
-* Missing files
-
-* Permission errors
-
----
-
-### Without handling:
-
-Your program crashes.
-
----
-
-### With handling:
-
-Your program safely recovers.
-
----
-
-# 🔹 Why Exception Handling Matters
-
-Professional software must:
-
-* Avoid crashes
-
-* Recover from bad input
-
-* Handle missing resources
-
-* Protect user experience
-
-* Log failures safely
-
----
-
-### Real-World Examples:
-
-* User enters invalid number
-
-* Server file missing
-
-* Customer uploads corrupted data
-
-* API receives malformed request
-
----
-
-# 🔹 try-catch Structure
-
-```java id="k7v4mx"
-
-try {
-
-    // risky code
-
-} catch (Exception e) {
-
-    // fallback behavior
-
-}
-
-```
-
----
-
-### Purpose:
-
-Allows code to continue safely.
-
----
-
-# 🔹 File I/O
-
-File Input/Output allows programs to:
-
-* Save user data
-
-* Read configurations
-
-* Process logs
-
-* Store reports
-
-* Persist information
-
----
-
-# 🧪 Project Structure
-
-```plaintext id="p3m8qw"
-
-module12/
-
-├── FileExercises.java
-
-├── tests/
-
-│   └── FileExercisesTest.java
-
-└── README.md
-
-```
-
----
-
-# Question 1 - Safe Division
-
-## Function:
-
-```java id="r5v7pk"
-
-exercise1_safeDivide(int a, int b)
-
-```
-
----
-
-### Detailed Objective:
-
-Create a division method that prevents crashes when dividing by zero.
-
----
-
-### Rules:
-
-* Return `a / b`
-
-* If `b == 0` → return `0`
-
----
-
-### Examples:
-
-| Input   | Output |
-
-| ------- | ------ |
-
-| (10, 2) | 5      |
-
-| (9, 3)  | 3      |
-
-| (5, 0)  | 0      |
-
----
-
-### Why This Matters:
-
-Division by zero is a common runtime error.
-
-Your method must protect against this.
-
----
-
-### Developer Skill Built:
-
-* Arithmetic safety
-
-* Exception prevention
-
-* Defensive coding
-
----
-
-# Question 2 - Parse Integer Safely
-
-## Function:
-
-```java id="t9m4xv"
-
-exercise2_parseInteger(String value)
-
-```
-
----
-
-### Detailed Objective:
-
-Convert text into an integer safely.
-
----
-
-### Rules:
-
-* Valid integer → return parsed value
-
-* Invalid input → return `-1`
-
----
-
-### Examples:
-
-| Input | Output |
-
-| ----- | ------ |
-
-| "123" | 123    |
-
-| "-45" | -45    |
-
-| "abc" | -1     |
-
-| ""    | -1     |
-
----
-
-### Real-World Context:
-
-User forms often contain invalid input.
-
-Your program must recover safely.
-
----
-
-### Developer Skill Built:
-
-* Input validation
-
-* Parsing safety
-
-* Error recovery
-
----
-
-# Question 3 - Write File
-
-## Function:
-
-```java id="f8v2qr"
-
-exercise3_writeFile(String fileName, String content)
-
-```
-
----
-
-### Detailed Objective:
-
-Write text content into a file.
-
----
-
-### Rules:
-
-* Write provided content
-
-* Return `true` if successful
-
-* Return `false` if failure occurs
-
----
-
-### Examples:
-
-| Input                  | Output |
-
-| ---------------------- | ------ |
-
-| ("notes.txt", "Hello") | true   |
-
-| Invalid path           | false  |
-
----
-
-### Real-World Uses:
-
-* Saving reports
-
-* Config files
-
-* User settings
-
-* Logs
-
----
-
-### Important:
-
-Always close file resources properly.
-
----
-
-# Question 4 - Read File
-
-## Function:
-
-```java id="j3m9qx"
-
-exercise4_readFile(String fileName)
-
-# 📘 Module 12: Exception Handling & File I/O
-
----
-
-## Learning Outcomes Assessed
-
-* Exception Handling
-
-* Defensive Programming
-
-* Try-Catch Logic
-
-* Runtime Error Prevention
-
-* File Writing
-
-* File Reading
-
-* File Processing
-
-* Resource Management
-
-* Java I/O
-
-* Robust Software Development
-
----
-
-## Module Structure
-
-This module contains:
-
-### Coding Practice:
-
-Complete all functions inside:
-
-```java id="v4m8qx"
-
-FileExercises.java
-
-```
-
----
-
-## Your Task
-
-For this module, you must:
-
-* Safely handle runtime errors
-
-* Prevent program crashes
-
-* Work with external files
-
-* Read and write file data
-
-* Manage invalid input
-
-* Return exact outputs
-
-* Use proper Java exception handling
-
-* Pass all tests successfully
-
----
-
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-
-* Use `try-catch` correctly
-
-* Handle failures gracefully
-
-* Prevent crashes
-
-* Work with files safely
-
-* Follow exact return requirements
-
-* Ensure all unit tests pass
-
----
-
-## How to Run Your Tests
-
-### Run all tests:
-
-```bash id="n8v3pk"
-
-mvn test
-
-```
-
-### Run module tests:
-
-```bash id="x2m7qt"
-
-mvn test -Dtest=FileExercisesTest
-
-```
-
----
-
-# 🧠 Core Java Reliability Concepts
-
----
-
-# 🔹 What Are Exceptions?
-
-Exceptions are runtime errors that interrupt normal program execution.
-
----
-
-### Common Examples:
-
-* Division by zero
-
-* Invalid number conversion
-
-* Missing files
-
-* Permission errors
-
----
-
-### Without handling:
-
-Your program crashes.
-
----
-
-### With handling:
-
-Your program safely recovers.
-
----
-
-# 🔹 Why Exception Handling Matters
-
-Professional software must:
-
-* Avoid crashes
-
-* Recover from bad input
-
-* Handle missing resources
-
-* Protect user experience
-
-* Log failures safely
-
----
-
-### Real-World Examples:
-
-* User enters invalid number
-
-* Server file missing
-
-* Customer uploads corrupted data
-
-* API receives malformed request
-
----
-
-# 🔹 try-catch Structure
-
-```java id="k7v4mx"
-
-try {
-
-    // risky code
-
-} catch (Exception e) {
-
-    // fallback behavior
-
-}
-
-```
-
----
-
-### Purpose:
-
-Allows code to continue safely.
-
----
-
-# 🔹 File I/O
-
-File Input/Output allows programs to:
-
-* Save user data
-
-* Read configurations
-
-* Process logs
-
-* Store reports
-
-* Persist information
-
----
-
-# 🧪 Project Structure
-
-```plaintext id="p3m8qw"
-
-module12/
-
-├── FileExercises.java
-
-├── tests/
-
-│   └── FileExercisesTest.java
-
-└── README.md
-
-```
-
----
-
-# Question 1 - Safe Division
-
-## Function:
-
-```java id="r5v7pk"
-
-exercise1_safeDivide(int a, int b)
-
-```
-
----
-
-### Detailed Objective:
-
-Create a division method that prevents crashes when dividing by zero.
-
----
-
-### Rules:
-
-* Return `a / b`
-
-* If `b == 0` → return `0`
-
----
-
-### Examples:
-
-| Input   | Output |
-
-| ------- | ------ |
-
-| (10, 2) | 5      |
-
-| (9, 3)  | 3      |
-
-| (5, 0)  | 0      |
-
----
-
-### Why This Matters:
-
-Division by zero is a common runtime error.
-
-Your method must protect against this.
-
----
-
-### Developer Skill Built:
-
-* Arithmetic safety
-
-* Exception prevention
-
-* Defensive coding
-
----
-
-# Question 2 - Parse Integer Safely
-
-## Function:
-
-```java id="t9m4xv"
-
-exercise2_parseInteger(String value)
-
-```
-
----
-
-### Detailed Objective:
-
-Convert text into an integer safely.
-
----
-
-### Rules:
-
-* Valid integer → return parsed value
-
-* Invalid input → return `-1`
-
----
-
-### Examples:
-
-| Input | Output |
-
-| ----- | ------ |
-
-| "123" | 123    |
-
-| "-45" | -45    |
-
-| "abc" | -1     |
-
-| ""    | -1     |
-
----
-
-### Real-World Context:
-
-User forms often contain invalid input.
-
-Your program must recover safely.
-
----
-
-### Developer Skill Built:
-
-* Input validation
-
-* Parsing safety
-
-* Error recovery
-
----
-
-# Question 3 - Write File
-
-## Function:
-
-```java id="f8v2qr"
-
-exercise3_writeFile(String fileName, String content)
-
-```
-
----
-
-### Detailed Objective:
-
-Write text content into a file.
-
----
-
-### Rules:
-
-* Write provided content
-
-* Return `true` if successful
-
-* Return `false` if failure occurs
-
----
-
-### Examples:
-
-| Input                  | Output |
-
-| ---------------------- | ------ |
-
-| ("notes.txt", "Hello") | true   |
-
-| Invalid path           | false  |
-
----
-
-### Real-World Uses:
-
-* Saving reports
-
-* Config files
-
-* User settings
-
-* Logs
-
----
-
-### Important:
-
-Always close file resources properly.
-
----
-
-# Question 4 - Read File
-
-## Function:
-
-```java id="j3m9qx"
-
-exercise4_readFile(String fileName)
-
-```
-
----
-
-### Detailed Objective:
-
-Read all file content safely.
-
----
-
-### Rules:
-
-* Return full file content
-
-* If error → return empty string `""`
-
----
-
-### Examples:
-
-| File Content | Output        |
-
-| ------------ | ------------- |
-
-| Hello World  | "Hello World" |
-
-| Missing file | ""            |
-
----
-
-### Real-World Uses:
-
-# 📘 Module 12: Exception Handling & File I/O
-
----
-
-## Learning Outcomes Assessed
-
-* Exception Handling
-* Defensive Programming
-* Try-Catch Logic
-* Runtime Error Prevention
-* File Writing
-* File Reading
-* File Processing
-* Resource Management
-* Java I/O
-* Robust Software Development
-
----
-
-## Module Structure
-
-This module contains:
-
-### Coding Practice:
-
-Complete all functions inside:
-
-```java id="v4m8qx"
-FileExercises.java
-```
-
----
-
-## Your Task
-
-For this module, you must:
-
-* Safely handle runtime errors
-* Prevent program crashes
-* Work with external files
-* Read and write file data
-* Manage invalid input
-* Return exact outputs
-* Use proper Java exception handling
-* Pass all tests successfully
-
----
-
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-* Use `try-catch` correctly
-* Handle failures gracefully
-* Prevent crashes
-* Work with files safely
-* Follow exact return requirements
-* Ensure all unit tests pass
-
----
-
-## How to Run Your Tests
-
-### Run all tests:
-
-```bash id="n8v3pk"
-mvn test
-```
-
-### Run module tests:
-
-```bash id="x2m7qt"
-mvn test -Dtest=FileExercisesTest
-```
-
----
-
-# 🧠 Core Java Reliability Concepts
-
----
-
-# 🔹 What Are Exceptions?
-
-Exceptions are runtime errors that interrupt normal program execution.
-
----
-
-### Common Examples:
-
-* Division by zero
-* Invalid number conversion
-* Missing files
-* Permission errors
-
----
-
-### Without handling:
-
-Your program crashes.
-
----
-
-### With handling:
-
-Your program safely recovers.
-
----
-
-# 🔹 Why Exception Handling Matters
-
-Professional software must:
-
-* Avoid crashes
-* Recover from bad input
-* Handle missing resources
-* Protect user experience
-* Log failures safely
-
----
-
-### Real-World Examples:
-
-* User enters invalid number
-* Server file missing
-* Customer uploads corrupted data
-* API receives malformed request
-
----
-
-# 🔹 try-catch Structure
-
-```java id="k7v4mx"
-try {
-    // risky code
-} catch (Exception e) {
-    // fallback behavior
-}
-```
-
----
-
-### Purpose:
-
-Allows code to continue safely.
-
----
-
-# 🔹 File I/O
-
-File Input/Output allows programs to:
-
-* Save user data
-* Read configurations
-* Process logs
-* Store reports
-* Persist information
-
----
-
-# 🧪 Project Structure
-
-```plaintext id="p3m8qw"
-module12/
-├── FileExercises.java
-├── tests/
-│   └── FileExercisesTest.java
-└── README.md
-```
-
----
-
-# Question 1 - Safe Division
-
-## Function:
-
-```java id="r5v7pk"
-exercise1_safeDivide(int a, int b)
-```
-
----
-
-### Detailed Objective:
-
-Create a division method that prevents crashes when d* Loading saved settings
-
-* Reading logs
-
-* Processing documents
-
----
-
-### Developer Skill Built:
-
-* File reading
-
-* Error handling
-
-* Resource safety
-
----
-
-# Question 5 - Count File Lines
-
-## Function:
-
-```java id="m7v4zt"
-
-exercise5_countLines(String fileName)
-
-```
-
----
-
-### Detailed Objective:
-
-Count total lines in a file.
-
----
-
-### Rules:
-
-* Return line count
-
-* If file missing/error → return `0`
-
----
-
-### Examples:
-
-| File         | Output |
-
-| ------------ | ------ |
-
-| 3-line file  | 3      |
-
-| Empty file   | 0      |
-
-| Missing file | 0      |
-
----
-
-### Real-World Applications:
-
-* Log analysis
-
-* CSV processing
-
-* Data validation
-
-* File audits
-
----
-
-### Developer Skill Built:
-
-* Sequential file reading
-
-* Counting logic
-
-* Robust processing
-
----
-
-# 💡 Key Developer Tips
-
-* Always expect failure
-
-* Never trust user input
-
-* Use `try-catch` carefully
-
-* Prefer `try-with-resources`
-
-* Close files automatically
-
-* Handle invalid paths
-
-* Protect against crashes
-
-* Build resilient software
-
----
-
-# 🔹 Professional Mindset
-
-Strong developers do not only write working code.
-
-They write code that survives bad input, missing resources, and unexpected failures.
-
----
-
-### Weak Code:
-
-Crashes easily.
-
-### Strong Code:
-
-Handles errors professionally.
-
----
-
-# 🚀 End Goal
-
-By completing this module, you should:
-
-* Understand Java exceptions deeply
-
-* Handle runtime failures confidently
-
-* Parse data safely
-
-* Read files correctly
-
-* Write files securely
-
-* Build fault-tolerant applications
-
-* Improve production readiness
-
-* Write professional-grade Java programs
-
----
-
-# 🏆 Success Mindset
-
-Exception handling and file I/O are essential for:
-
-* Enterprise applications
-
-* Backend development
-
-* APIs
-
-* Automation
-
-* Data engineering
-
-* Software reliability
-
-Mastering this module moves you closer to real-world software engineering, where stability matters as much as functionality.
-
-```
-
----
-
-### Detailed Objective:
-
-Read all file content safely.
-
----
-
-### Rules:
-
-* Return full file content
-
-* If error → return empty string `""`
-
----
-
-### Examples:
-
-| File Content | Output        |
-
-| ------------ | ------------- |
-
-| Hello World  | "Hello World" |
-
-| Missing file | ""            |
-
----
-
-### Real-World Uses:
-
-* Loading saved settings
-
-* Reading logs
-
-* Processing documents
-
----
-
-### Developer Skill Built:
-
-* File reading
-
-* Error handling
-
-* Resource safety
-
----
-
-# Question 5 - Count File Lines
-
-## Function:
-
-```java id="m7v4zt"
-
-exercise5_countLines(String fileName)
-
-```
-
----
-
-### Detailed Objective:
-
-Count total lines in a file.
-
----
-
-### Rules:
-
-* Return line count
-
-* If file missing/error → return `0`
-
----
-
-### Examples:
-
-| File         | Output |
-
-| ------------ | ------ |
-
-| 3-line file  | 3      |
-
-| Empty file   | 0      |
-
-| Missing file | 0      |
-
----
-
-### Real-World Applications:
-
-* Log analysis
-
-* CSV processing
-
-* Data validation
-
-* File audits
-
----
-
-### Developer Skill Built:
-
-* Sequential file reading
-
-* Counting logic
-
-* Robust processing
-
----
-
-# 💡 Key Developer Tips
-
-* Always expect failure
-
-* Never trust user input
-
-* Use `try-catch` carefully
-
-* Prefer `try-with-resources`
-
-* Close files automatically
-
-* Handle invalid paths
-
-* Protect against crashes
-
-* Build resilient software
-
----
-
-# 🔹 Professional Mindset
-
-Strong developers do not only write working code.
-
-They write code that survives bad input, missing resources, and unexpected failures.
-
----
-
-### Weak Code:
-
-Crashes easily.
-
-### Strong Code:
-
-Handles errors professionally.
-
----
-
-# 🚀 End Goal
-
-By completing this module, you should:
-
-* Understand Java exceptions deeply
-
-* Handle runtime failures confidently
-
-* Parse data safely
-
-* Read files correctly
-
-* Write files securely
-
-* Build fault-tolerant applications
-
-* Improve production readiness
-
-* Write professional-grade Java programs
-
----
-
-# 🏆 Success Mindset
-
-Exception handling and file I/O are essential for:
-
-* Enterprise applications
-
-* Backend development
-
-* APIs
-
-* Automation
-
-* Data engineering
-
-* Software reliability
-
-Mastering this module moves you closer to real-world software engineering, where stability matters as much as functionality.
-
-Detailed Objective:
-
-Create a division method that prevents crashes when dividing by zero.
-
----
-
-### Rules:
-
-* Return `a / b`
-* If `b == 0` → return `0`
-
----
-
-### Examples:
-
-| Input   | Output |
-| ------- | ------ |
-| (10, 2) | 5      |
-| (9, 3)  | 3      |
-| (5, 0)  | 0      |
-
----
-
-### Why This Matters:
-
-Division by zero is a common runtime error.
-
-Your method must protect against this.
-
----
-
-### Developer Skill Built:
-
-* Arithmetic safety
-* Exception prevention
-* Defensive coding
-
----
-
-# Question 2 - Parse Integer Safely
-
-## Function:
-
-```java
-exercise2_parseInteger(String value)
-```
-
 ---
 
-### Detailed Objective:
+## 🧠 Core Concepts
 
-Convert text into an integer safely.
-
 ---
 
-### Rules:
+### 🔹 What is an Exception?
 
-* Valid integer → return parsed value
-* Invalid input → return `-1`
+An exception is an unexpected error that occurs during program execution.
 
----
+It interrupts normal program flow.
 
-### Examples:
+Examples:
 
-| Input | Output |
-| ----- | ------ |
-| "123" | 123    |
-| "-45" | -45    |
-| "abc" | -1     |
-| ""    | -1     |
+- Division by zero  
+- Invalid number format  
+- Missing file  
+- Broken input data  
 
 ---
 
-### Real-World Context:
+### 🔹 Why Exception Handling Matters
 
-User forms often contain invalid input.
+Without handling errors:
 
-Your program must recover safely.
+- Programs crash ❌  
 
----
-
-### Developer Skill Built:
+With handling:
 
-* Input validation
-* Parsing safety
-* Error recovery
+- Programs recover safely ✅  
+- User experience remains stable  
 
 ---
-
-# Question 3 - Write File
-
-## Function:
 
-```java
-exercise3_writeFile(String fileName, String content)
-```
+### 🔹 try-catch Concept
 
----
-
-### Detailed Objective:
+Used to safely handle risky operations:
 
-Write text content into a file.
+- try → code that may fail  
+- catch → what happens if it fails  
 
 ---
-
-### Rules:
-
-* Write provided content
-* Return `true` if successful
-* Return `false` if failure occurs
 
----
+### 🔹 File I/O (Input & Output)
 
-### Examples:
+Used to:
 
-| Input                  | Output |
-| ---------------------- | ------ |
-| ("notes.txt", "Hello") | true   |
-| Invalid path           | false  |
+- Store data permanently  
+- Read saved information  
+- Process logs or reports  
+- Handle external data sources  
 
 ---
-
-### Real-World Uses:
 
-* Saving reports
-* Config files
-* User settings
-* Logs
+## 🧪 Exercises
 
 ---
 
-### Important:
+## 🧩 Question 1 — Safe Division
 
-Always close file resources properly.
-
----
+### Method:
+safeDivide(int a, int b)
 
-# Question 4 - Read File
+### Objective:
 
-## Function:
+Create a method that safely performs division.
 
-```java
-exercise4_readFile(String fileName)
-```
+### Requirements:
 
----
+- Return the result of a ÷ b  
+- If division by zero occurs, return 0  
+- Program must never crash  
 
-### Detailed Objective:
+### What is being tested:
 
-Read all file content safely.
+- Arithmetic safety  
+- Error prevention  
+- Defensive programming  
 
 ---
 
-### Rules:
+## 🧩 Question 2 — Safe Integer Parsing
 
-* Return full file content
-* If error → return empty string `""`
+### Method:
+parseInteger(String value)
 
----
+### Objective:
 
-### Examples:
+Convert a string into an integer safely.
 
-| File Content | Output        |
-| ------------ | ------------- |
-| Hello World  | "Hello World" |
-| Missing file | ""            |
+### Requirements:
 
----
+- If input is valid → return converted value  
+- If invalid → return -1  
+- Must not crash on bad input  
 
-### Real-World Uses:
+### What is being tested:
 
-* Loading saved settings
-* Reading logs
-* Processing documents
+- Input validation  
+- Exception handling  
+- Data parsing safety  
 
 ---
-
-### Developer Skill Built:
 
-* File reading
-* Error handling
-* Resource safety
+## 🧩 Question 3 — Write to File
 
----
+### Method:
+writeFile(String fileName, String content)
 
-# Question 5 - Count File Lines
+### Objective:
 
-## Function:
+Write text data into a file.
 
-```java
-exercise5_countLines(String fileName)
-```
+### Requirements:
 
----
+- Save provided content into file  
+- Return true if successful  
+- Return false if failure occurs  
+- Must handle file errors safely  
 
-### Detailed Objective:
+### What is being tested:
 
-Count total lines in a file.
+- File writing  
+- Exception handling  
+- Resource management  
 
 ---
 
-### Rules:
+## 🧩 Question 4 — Read from File
 
-* Return line count
-* If file missing/error → return `0`
+### Method:
+readFile(String fileName)
 
----
+### Objective:
 
-### Examples:
+Read the full content of a file.
 
-| File         | Output |
-| ------------ | ------ |
-| 3-line file  | 3      |
-| Empty file   | 0      |
-| Missing file | 0      |
+### Requirements:
 
----
+- Return file content as a string  
+- If error occurs → return empty string ""  
+- Must handle all errors safely  
 
-### Real-World Applications:
+### What is being tested:
 
-* Log analysis
-* CSV processing
-* Data validation
-* File audits
+- File reading  
+- Error handling  
+- Resource safety  
 
 ---
 
-### Developer Skill Built:
+## 🧩 Question 5 — Count Lines in File
 
-* Sequential file reading
-* Counting logic
-* Robust processing
+### Method:
+countLines(String fileName)
 
----
-
-# 💡 Key Developer Tips
+### Objective:
 
-* Always expect failure
-* Never trust user input
-* Use `try-catch` carefully
-* Prefer `try-with-resources`
-* Close files automatically
-* Handle invalid paths
-* Protect against crashes
-* Build resilient software
+Count how many lines exist in a file.
 
----
+### Requirements:
 
-# 🔹 Professional Mindset
+- Return number of lines  
+- If file cannot be read → return 0  
+- Must not crash under any condition  
 
-Strong developers do not only write working code.
+### What is being tested:
 
-They write code that survives bad input, missing resources, and unexpected failures.
+- File processing  
+- Iteration over data  
+- Robust error handling  
 
 ---
-
-### Weak Code:
-
-Crashes easily.
 
-### Strong Code:
+## 💡 Key Developer Tips
 
-Handles errors professionally.
+- Always assume input can fail  
+- Never trust external data  
+- Use try-catch for risky operations  
+- Close file resources properly  
+- Handle null and invalid values  
+- Prefer safe defaults over crashes  
+- Think defensively like production systems  
 
 ---
 
-# 🚀 End Goal
+## 🚀 Goal of This Module
 
-By completing this module, you should:
+By the end of this module, you should:
 
-* Understand Java exceptions deeply
-* Handle runtime failures confidently
-* Parse data safely
-* Read files correctly
-* Write files securely
-* Build fault-tolerant applications
-* Improve production readiness
-* Write professional-grade Java programs
+- Understand Java exceptions deeply  
+- Write safe and stable programs  
+- Work with files confidently  
+- Prevent crashes in real-world scenarios  
+- Build professional-grade Java applications  
 
 ---
 
-# 🏆 Success Mindset
+## 🏆 Final Mindset
 
-Exception handling and file I/O are essential for:
+Good developers write code that works.
 
-* Enterprise applications
-* Backend development
-* APIs
-* Automation
-* Data engineering
-* Software reliability
+Great developers write code that **doesn’t break when things go wrong**.
 
-Mastering this module moves you closer to real-world software engineering, where stability matters as much as functionality.
+This module builds production-level reliability thinking.
