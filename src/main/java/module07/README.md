@@ -2,66 +2,83 @@
 
 ---
 
-## Learning Outcomes Assessed
+## 🎯 Learning Objectives
 
-* Array Processing
-* String Manipulation
-* Combined Data Logic
-* Iterative Problem Solving
-* Pattern Recognition
-* Real-World Text Analysis
+In this module, you will:
+
+- Combine arrays and strings into unified solutions
+- Process structured data step-by-step using loops
+- Handle edge cases carefully
+- Strengthen logical problem-solving
+- Build confidence solving layered programming tasks
+- Think more like a software engineer than an isolated coder
 
 ---
 
-## Module Structure
+## 🎥 Video Learning Resource
+
+https://youtu.be/xTtL8E4LzTQ
+
+### ⏱ Watch This Section:
+
+- **05:03:26 → 05:28:07** (Review if needed)
+
+👉 Focus on applying logic, not passive watching.
+
+---
+
+# 📚 Learning Outcomes Assessed
+
+- Array Processing
+- String Manipulation
+- Combined Data Logic
+- Iterative Problem Solving
+- Pattern Recognition
+- Real-World Text Analysis
+- Boundary Safety
+- Algorithmic Thinking
+
+---
+
+# 🛠 Module Structure
 
 This module contains:
 
 ### Coding Practice:
 
-All questions must be completed inside:
+Complete all functions inside:
 
-```java id="m8x4pr"
+```java
 ArrayStringExercises.java
 ```
 
-Your task is to:
+---
 
-* Read each function carefully
-* Understand how arrays and strings interact
-* Break larger problems into smaller logical steps
-* Process data safely using loops
-* Handle formatting and validation carefully
-* Return exact required outputs
-* Pass all tests successfully
+# ✅ What You Must Do
+
+For this module, you must:
+
+- Understand how arrays and strings interact
+- Use loops safely
+- Handle indexing and substring boundaries correctly
+- Solve multi-step logic problems
+- Return exact expected outputs
+- Handle unusual inputs carefully
+- Pass all unit tests successfully
 
 ---
 
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-* Combine arrays and strings effectively
-* Handle substring and indexing safely
-* Prevent boundary and logic errors
-* Handle edge cases carefully
-* Follow exact expected outputs
-* Ensure all unit tests pass
-
----
-
-## How to Run Your Tests
+# 🧪 How to Run Your Tests
 
 ### Run all tests:
 
-```bash id="d3q9lt"
+```bash
 mvn test
 ```
 
-### Run module tests:
+### Run only this module’s tests:
 
-```bash id="k6n2vx"
+```bash
 mvn test -Dtest=ArrayStringExercisesTest
 ```
 
@@ -71,23 +88,22 @@ mvn test -Dtest=ArrayStringExercisesTest
 
 ---
 
-## Why Combine Arrays + Strings?
+## 🔹 Why Combine Arrays + Strings?
 
 Real-world software often requires:
 
-* Splitting text into parts
-* Searching through collections of words
-* Counting patterns in user input
-* Processing structured text data
-* Analyzing sequences step-by-step
+- Splitting text
+- Processing collections of words
+- Searching patterns
+- Counting frequencies
+- Parsing structured input
+- Multi-stage logic
 
 ---
 
-## Common Skills Used
+## 🔹 String Iteration
 
-### String Iteration:
-
-```java id="y5m8cu"
+```java
 for (int i = 0; i < text.length(); i++) {
     char c = text.charAt(i);
 }
@@ -95,9 +111,9 @@ for (int i = 0; i < text.length(); i++) {
 
 ---
 
-### Array Traversal:
+## 🔹 Array Traversal
 
-```java id="r9v3ke"
+```java
 for (String word : arr) {
     // process each word
 }
@@ -105,193 +121,149 @@ for (String word : arr) {
 
 ---
 
-## Important Reminder
+## 🔹 Combined Logic
 
-When combining strings and arrays:
+Programming often requires:
 
-* Check boundaries carefully
-* Avoid index errors
-* Use substring safely
-* Validate lengths before processing
-* Normalize case when needed
-
----
-
-# 🧪 Fundamentals Coding Practice
+- Loop + condition
+- String manipulation
+- Array processing
+- Boundary validation
+- `break` / `continue`
 
 ---
 
-## Project Structure
+## 🔹 Important Reminder
 
-```plaintext id="t2w7bn"
-module07/
-├── ArrayStringExercises.java
-├── tests/
-│   └── ArrayStringExercisesTest.java
-└── README.md
-```
+- Check boundaries carefully
+- Avoid index errors
+- Validate substring ranges
+- Normalize case when needed
+- Think step-by-step
 
 ---
 
-# Question 1 - splitString
+# 🧪 Exercises
+
+---
+
+# 🧩 Question 1 - splitString
 
 ## Function:
 
-```java id="f7z2qm"
+```java
 exercise1_splitString(String s, int length)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that splits a string into smaller chunks of a specified size.
+### Objective:
 
-This exercise teaches:
-
-* Substring extraction
-* Array creation
-* Controlled string segmentation
-* Handling uneven lengths
-
-Your method should divide the original string into sections of the provided length.
-
-If the final section has fewer characters than the requested size, it must still be included.
+Split a string into chunks of specified length.
 
 ---
 
 ### Rules:
 
-* Split string into chunks of `length`
-* Preserve all characters
-* Include smaller final chunk if necessary
-* Return results as `String[]`
-
----
-
-### Input:
-
-* String `s`
-* Integer `length`
-
----
-
-### Output:
-
-* Array of string chunks
+- Split into sections of `length`
+- Preserve all characters
+- Include smaller final chunk if needed
+- Return as `String[]`
 
 ---
 
 ### Examples:
 
-| Input            | Output                      |
-| ---------------- | --------------------------- |
-| "hello world", 3 | ["hel", "lo ", "wor", "ld"] |
-| "abcdefg", 2     | ["ab", "cd", "ef", "g"]     |
-| "short", 10      | ["short"]                   |
+| Input | Output |
+|------|--------|
+| `"hello world", 3` | `["hel", "lo ", "wor", "ld"]` |
+| `"abcdefg", 2` | `["ab", "cd", "ef", "g"]` |
+| `"short", 10` | `["short"]` |
 
 ---
 
 ### Edge Cases:
 
-* Chunk size larger than string
-* Exact division
-* Empty strings
-* Length of 1
-* Invalid boundaries
+- Length larger than string
+- Exact division
+- Empty strings
+- Length of 1
+- Boundary safety
 
 ---
 
-# Question 2 - findLongestWord
+# 🧩 Question 2 - findLongestWord
 
 ## Function:
 
-```java id="v4p8xn"
+```java
 exercise2_findLongestWord(String[] arr)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that scans an array of words and returns the longest valid word.
+### Objective:
 
-This exercise teaches:
-
-* Array scanning
-* Conditional comparisons
-* Ignoring invalid entries
-* Tracking best matches
+Return the longest valid word from an array.
 
 ---
 
 ### Rules:
 
-* Ignore empty strings
-* Return the longest word
-* If multiple words tie, return the first one
-
----
-
-### Input:
-
-* String array
-
----
-
-### Output:
-
-* Longest word
+- Ignore empty strings
+- Return longest word
+- If tie → return first longest
 
 ---
 
 ### Examples:
 
-| Input                      | Output     |
-| -------------------------- | ---------- |
-| ["cat", "elephant", "dog"] | "elephant" |
-| ["", "hello", "world"]     | "hello"    |
-| ["one", "two", "six"]      | "one"      |
+| Input | Output |
+|------|--------|
+| `["cat", "elephant", "dog"]` | `"elephant"` |
+| `["", "hello", "world"]` | `"hello"` |
+| `["one", "two", "six"]` | `"one"` |
 
 ---
 
 ### Edge Cases:
 
-* Empty strings
-* All equal lengths
-* Single-element arrays
-* Multiple longest matches
+- Empty strings
+- Equal lengths
+- Single item arrays
+- Multiple ties
 
 ---
 
-# Question 3 - countVowels
+# 🧩 Question 3 - countVowels
 
 ## Function:
 
-```java id="u1q7zk"
+```java
 exercise3_countVowels(String s)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that counts how many times each vowel appears in a string.
+### Objective:
 
-This exercise teaches:
+Count vowel frequency in text.
 
-* Character-by-character processing
-* Pattern counting
-* Frequency arrays
-* Case normalization
+---
 
-Your method must count occurrences of:
+### Vowels:
 
-* `a`
-* `e`
-* `i`
-* `o`
-* `u`
+- `a`
+- `e`
+- `i`
+- `o`
+- `u`
 
 ---
 
 ### Return Format:
 
-```java id="w6k3pv"
+```java
 [aCount, eCount, iCount, oCount, uCount]
 ```
 
@@ -299,54 +271,43 @@ Your method must count occurrences of:
 
 ### Rules:
 
-* Ignore non-letter characters
-* Ignore consonants
-* Count vowels only
-* Case-insensitive if required by tests
-
----
-
-### Input:
-
-* String `s`
-
----
-
-### Output:
-
-* Integer array
+- Ignore non-letters
+- Ignore consonants
+- Count vowels only
+- Normalize case if needed
 
 ---
 
 ### Examples:
 
-| Input         | Output      |
-| ------------- | ----------- |
-| "hello world" | [0,1,0,2,0] |
-| "aeiou"       | [1,1,1,1,1] |
-| "bcdfg"       | [0,0,0,0,0] |
+| Input | Output |
+|------|--------|
+| `"hello world"` | `[0,1,0,2,0]` |
+| `"aeiou"` | `[1,1,1,1,1]` |
+| `"bcdfg"` | `[0,0,0,0,0]` |
 
 ---
 
 ### Edge Cases:
 
-* Empty strings
-* Uppercase vowels
-* No vowels
-* Only vowels
-* Symbols and spaces
+- Empty strings
+- Uppercase vowels
+- No vowels
+- Only vowels
+- Symbols/spaces
 
 ---
 
 # 💡 Key Developer Tips
 
-* Always validate substring ranges
-* Prevent out-of-bounds errors
-* Normalize case for consistency
-* Use loops carefully
-* Track variables clearly
-* Think step-by-step
-* Handle unusual input safely
+- Validate substring ranges carefully
+- Prevent index-out-of-bounds errors
+- Normalize case consistently
+- Track counters clearly
+- Use loops methodically
+- Handle malformed inputs safely
+- Break larger problems into smaller steps
+- Debug step-by-step
 
 ---
 
@@ -354,19 +315,26 @@ Your method must count occurrences of:
 
 By completing this module, you should:
 
-* Combine multiple programming concepts effectively
-* Process structured text confidently
-* Solve layered logic problems
-* Improve real-world coding ability
-* Strengthen algorithmic thinking
-* Build stronger debugging habits
+- Combine multiple programming concepts effectively
+- Process text and structured data confidently
+- Solve layered logic problems
+- Improve practical coding ability
+- Strengthen debugging precision
+- Build real-world development readiness
 
 ---
 
 # 🏆 Success Mindset
 
-Professional software rarely uses isolated concepts.
+Professional software development rarely uses isolated concepts.
 
-Real development combines strings, arrays, loops, and logic simultaneously.
+Real systems combine:
 
-Mastering combined problem-solving is a major step toward becoming a stronger developer.
+- Arrays
+- Strings
+- Loops
+- Validation
+- Pattern matching
+- Multi-step logic
+
+Mastering combined logic is a major leap toward becoming a stronger developer.
