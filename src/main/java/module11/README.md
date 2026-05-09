@@ -1,142 +1,179 @@
-# 📘 Module 11: Wrapper Classes, Collections & Enums
+# 📘 Module 11: Wrapper Classes, Collections, HashMaps, BiMaps & Advanced Data Structures
 
 ---
 
-## Learning Outcomes Assessed
+## 🎯 Learning Objectives
+
+In this module, you will:
+
+* Understand Java wrapper classes (`Integer`, `Double`, etc.)
+* Learn autoboxing and unboxing
+* Handle `null` values safely
+* Use `ArrayList` for dynamic collections
+* Use `HashMap` for structured key-value storage
+* Build advanced `ArrayList` logic
+* Perform advanced `HashMap` operations
+* Understand BiMap (bidirectional mapping) concepts
+* Practice reverse lookups and grouped data structures
+* Use enums for fixed safe values
+* Strengthen real-world data processing skills
+* Improve enterprise-level Java development foundations
+
+---
+
+## 🎥 Video Learning Resources
+
+### Main Java Course:
+
+https://youtu.be/xTtL8E4LzTQ
+
+### ⏱ Watch These Sections in Order:
+
+### 1️⃣ Wrapper Classes + ArrayList
+
+* **08:45:17 → 08:55:51**
+
+### 2️⃣ HashMap + Enums
+
+* **10:52:09 → 11:02:38**
+
+---
+
+### 🎁 Bonus Advanced Collections Video:
+
+https://youtu.be/pJNUDXzmBCE?si=zGn9KfVBO9VDtM9I
+
+### ⏱ Watch:
+
+* Full 5-minute lesson
+
+---
+
+### 📚 Recommended Study Method:
+
+* Watch one concept at a time
+* Pause frequently
+* Code immediately after learning
+* Test each concept manually
+* Focus on safe data handling
+* Build confidence through repetition
+
+---
+
+# 📚 Learning Outcomes Assessed
 
 * Wrapper Classes
 * Null Safety
 * Autoboxing / Unboxing
 * ArrayList
+* Advanced ArrayList Processing
 * HashMap
-* Data Filtering
+* Advanced HashMap Processing
+* Reverse Mapping
+* BiMap Concepts
 * Frequency Counting
 * Enum Usage
-* Type Safety
-* Structured Data Management
+* Structured Data Transformation
+* Software Scalability
+* Collection-Based Problem Solving
 
 ---
 
-## Module Structure
+# 🛠 Module Structure
 
 This module contains:
 
-### Coding Practice:
+### Coding Practice Files:
 
-Complete all functions inside:
-
-```java id="r8m4qv"
+```java
 CollectionsExercises.java
-```
-
-You will also work with:
-
-```java id="x3v7pk"
 Day.java
 Grade.java
 ```
 
 ---
 
-## Your Task
+# ✅ What You Must Do
 
 For this module, you must:
 
-* Understand primitive wrapper classes
-* Handle `null` values safely
-* Work with dynamic lists
-* Store structured key-value data
-* Use enums professionally
-* Build cleaner modern Java logic
-* Return exact required outputs
+* Use wrapper classes safely
+* Handle `null` values properly
+* Build dynamic collections using `ArrayList`
+* Store structured data using `HashMap`
+* Apply reverse mapping concepts
+* Practice grouped data processing
+* Understand enum safety
+* Return exact expected outputs
 * Pass all tests successfully
 
 ---
 
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-* Apply proper collection logic
-* Handle edge cases
-* Avoid runtime errors
-* Follow exact return formats
-* Use appropriate data structures
-* Ensure all unit tests pass
-
----
-
-## How to Run Your Tests
+# 🧪 How to Run Your Tests
 
 ### Run all tests:
 
-```bash id="k4v9tx"
+```bash
 mvn test
 ```
 
-### Run module tests:
+### Run only this module’s tests:
 
-```bash id="n7m2qw"
+```bash
 mvn test -Dtest=CollectionsExercisesTest
 ```
 
 ---
 
-# 🧠 Core Java Data Concepts
+# 🧠 Core Java Data Structure Concepts
 
 ---
 
-# 🔹 Wrapper Classes
+## 🔹 What Are Wrapper Classes?
 
-Java primitives are basic data types:
+Wrapper classes convert Java primitives into objects.
 
-* int
-* double
-* boolean
+### Examples:
 
-Wrapper classes convert them into objects:
-
-* Integer
-* Double
-* Boolean
-
----
-
-### Example:
-
-```java id="p5x8vr"
+```java
 Integer x = 5;
+Double y = 3.14;
+Boolean flag = true;
 ```
 
 ---
 
 ### Why They Matter:
 
-Wrappers allow:
+Wrapper classes allow:
 
+* Object storage in collections
 * Null values
-* Collection storage
-* Object-based APIs
 * Utility methods
+* Modern API compatibility
+* Safer enterprise development
 
 ---
 
 ### Important:
 
-Wrappers can be `null`, unlike primitives.
+Unlike primitives, wrappers can be:
+
+```java
+null
+```
+
+Always validate accordingly.
 
 ---
 
-# 🔹 ArrayList
+## 🔹 What is ArrayList?
 
-`ArrayList` is a dynamic array that can grow or shrink.
-
----
+`ArrayList` is a dynamic resizable array.
 
 ### Example:
 
-```java id="m3v7zp"
+```java
 ArrayList<Integer> numbers = new ArrayList<>();
 ```
 
@@ -144,22 +181,33 @@ ArrayList<Integer> numbers = new ArrayList<>();
 
 ### Benefits:
 
-* Flexible size
+* Flexible sizing
+* Dynamic storage
 * Easy iteration
-* Built-in methods
-* Better for dynamic datasets
+* Fast access
+* Common real-world usage
 
 ---
 
-# 🔹 HashMap
+### Common Methods:
 
-Stores data as key-value pairs.
+```java
+add()
+get()
+size()
+remove()
+contains()
+```
 
 ---
+
+## 🔹 What is HashMap?
+
+`HashMap` stores data as key-value pairs.
 
 ### Example:
 
-```java id="q8m4xt"
+```java
 HashMap<String, Integer> scores = new HashMap<>();
 ```
 
@@ -168,39 +216,77 @@ HashMap<String, Integer> scores = new HashMap<>();
 ### Benefits:
 
 * Fast lookups
-* Organized structured data
+* Structured data storage
 * Frequency counting
-* Real-world mapping systems
+* Reverse indexing
+* Scalable software systems
 
 ---
 
-# 🔹 Enums
+### Common Methods:
 
-Enums represent fixed known values.
+```java
+put()
+get()
+containsKey()
+remove()
+keySet()
+```
 
 ---
+
+## 🔹 What is BiMap?
+
+A BiMap (bidirectional map) allows reverse lookup of values back to keys.
+
+---
+
+### Example Concept:
+
+```java
+"A" → 1
+1 → "A"
+```
+
+---
+
+### Why It Matters:
+
+BiMap concepts help with:
+
+* Reverse searches
+* Data transformations
+* Identifier mapping
+* Real-world backend systems
+
+---
+
+## 🔹 What Are Enums?
+
+Enums represent fixed constant values.
 
 ### Example:
 
-```java id="t2v9pk"
-MONDAY
-TUESDAY
+```java
+enum Day {
+    MONDAY, TUESDAY
+}
 ```
 
 ---
 
 ### Benefits:
 
-* Safer than strings
+* Type safety
 * Prevent invalid values
-* Cleaner code
-* Better readability
+* Cleaner architecture
+* Better maintainability
 
 ---
 
 # 🧪 Project Structure
 
-```plaintext id="y7x4mq"
+```plaintext
 module11/
 ├── CollectionsExercises.java
 ├── Day.java
@@ -212,25 +298,23 @@ module11/
 
 ---
 
-# Question 1 - Wrapper Sum
+# 🧩 Exercises
+
+---
+
+# 🧩 Question 1 - Wrapper Sum
 
 ## Function:
 
-```java id="c8m3vq"
+```java
 exercise1_sumWrapper(Integer a, Integer b)
 ```
 
 ---
 
-### Detailed Objective:
+### Objective:
 
-Create a method that safely adds two `Integer` objects together.
-
-This exercise teaches:
-
-* Wrapper handling
-* Null safety
-* Defensive coding
+Safely add two wrapper integers.
 
 ---
 
@@ -251,34 +335,35 @@ This exercise teaches:
 
 ---
 
-### Edge Cases:
+### Key Focus:
 
-* Both null
-* One null
-* Negative values
+* Null safety
+* Defensive programming
+* Wrapper handling
 
 ---
 
-# Question 2 - ArrayList Filter
+# 🧩 Question 2 - Filter Even Numbers
 
 ## Function:
 
-```java id="w5v8pk"
+```java
 exercise2_filterEven(ArrayList<Integer> list)
 ```
 
 ---
 
-### Detailed Objective:
+### Objective:
 
-Filter a list of integers and return only even numbers.
+Return only even numbers from a list.
 
 ---
 
 ### Rules:
 
 * Preserve original order
-* Include numbers divisible by 2 only
+* Return a new filtered list
+* Include only numbers divisible by `2`
 
 ---
 
@@ -292,68 +377,52 @@ Filter a list of integers and return only even numbers.
 
 ---
 
-### Why This Matters:
-
-Filtering data is foundational in software systems.
-
----
-
-# Question 3 - ArrayList to String
+# 🧩 Question 3 - List to String
 
 ## Function:
 
-```java id="z4m7qx"
+```java
 exercise3_listToString(ArrayList<Integer> list)
 ```
 
 ---
 
-### Detailed Objective:
+### Objective:
 
-Convert an integer list into a comma-separated string.
+Convert a list into a properly formatted comma-separated string.
 
 ---
 
 ### Rules:
 
-* Format cleanly
 * Preserve order
+* Separate values with commas
 * No extra commas
+* Empty list → `""`
 
 ---
 
 ### Examples:
 
-| Input   | Output  |
-| ------- | ------- |
-| [1,2,3] | "1,2,3" |
-| [5]     | "5"     |
-| []      | ""      |
+| Input   | Output    |
+| ------- | --------- |
+| [1,2,3] | "1, 2, 3" |
+| [5]     | "5"       |
+| []      | ""        |
 
 ---
 
-### Developer Focus:
-
-String formatting is essential for:
-
-* Reports
-* Logging
-* APIs
-* User interfaces
-
----
-
-# Question 4 - HashMap Lookup
+# 🧩 Question 4 - HashMap Lookup
 
 ## Function:
 
-```java id="f9v3tr"
+```java
 exercise4_mapLookup(HashMap<String, Integer> map, String key)
 ```
 
 ---
 
-### Detailed Objective:
+### Objective:
 
 Safely retrieve a value from a map.
 
@@ -362,7 +431,7 @@ Safely retrieve a value from a map.
 ### Rules:
 
 * Return matching value
-* If key missing → return `-1`
+* Missing key → `-1`
 
 ---
 
@@ -375,23 +444,17 @@ Safely retrieve a value from a map.
 
 ---
 
-### Why:
-
-This simulates real-world data retrieval systems.
-
----
-
-# Question 5 - Count Frequencies
+# 🧩 Question 5 - Count Word Frequencies
 
 ## Function:
 
-```java id="j6m8qp"
+```java
 exercise5_countFrequencies(ArrayList<String> words)
 ```
 
 ---
 
-### Detailed Objective:
+### Objective:
 
 Count how many times each word appears.
 
@@ -415,26 +478,26 @@ Count how many times each word appears.
 
 ### Real-World Applications:
 
-* Search analytics
-* Word frequency
-* Logs
-* Data science preprocessing
+* Search engines
+* Analytics
+* Text processing
+* Data pipelines
 
 ---
 
-# Question 6 - Enum Day Type
+# 🧩 Question 6 - Enum Day Type
 
 ## Function:
 
-```java id="h4v7zx"
+```java
 exercise6_dayType(Day day)
 ```
 
 ---
 
-### Detailed Objective:
+### Objective:
 
-Determine whether an enum day is a weekday or weekend.
+Determine whether a day is a weekday or weekend.
 
 ---
 
@@ -454,25 +517,19 @@ Determine whether an enum day is a weekday or weekend.
 
 ---
 
-### Why:
-
-Enums improve reliability compared to raw strings.
-
----
-
-# Question 7 - Enum Grade Description
+# 🧩 Question 7 - Enum Grade Description
 
 ## Function:
 
-```java id="n3m9qc"
+```java
 exercise7_gradeDescription(Grade grade)
 ```
 
 ---
 
-### Detailed Objective:
+### Objective:
 
-Convert academic grades into readable performance descriptions.
+Convert grade enums into readable descriptions.
 
 ---
 
@@ -486,62 +543,321 @@ Convert academic grades into readable performance descriptions.
 
 ---
 
-### Examples:
+---
 
-| Input | Output      |
-| ----- | ----------- |
-| A     | "Excellent" |
-| C     | "Average"   |
-| F     | "Fail"      |
+# 🚀 ADVANCED COLLECTIONS SECTION
 
 ---
 
-### Real-World Use:
+# 🧩 Question 8 - Remove Duplicates from ArrayList
 
-* School systems
-* Reports
-* Performance dashboards
+## Function:
+
+```java
+exercise8_removeDuplicates(ArrayList<Integer> list)
+```
+
+---
+
+### Objective:
+
+Return a new list with duplicate values removed.
+
+---
+
+### Rules:
+
+* Preserve original order
+* Keep first occurrence only
+
+---
+
+### Examples:
+
+| Input       | Output  |
+| ----------- | ------- |
+| [1,2,2,3,1] | [1,2,3] |
+
+---
+
+# 🧩 Question 9 - Find Largest Value in ArrayList
+
+## Function:
+
+```java
+exercise9_findLargest(ArrayList<Integer> list)
+```
+
+---
+
+### Objective:
+
+Return the largest integer in the list.
+
+---
+
+### Rules:
+
+* Empty list → `Integer.MIN_VALUE`
+
+---
+
+### Examples:
+
+| Input   | Output            |
+| ------- | ----------------- |
+| [3,8,2] | 8                 |
+| []      | Integer.MIN_VALUE |
+
+---
+
+# 🧩 Question 10 - Reverse an ArrayList
+
+## Function:
+
+```java
+exercise10_reverseList(ArrayList<Integer> list)
+```
+
+---
+
+### Objective:
+
+Return a reversed copy of the list.
+
+---
+
+### Rules:
+
+* Preserve original list
+* Return new reversed list
+
+---
+
+### Examples:
+
+| Input   | Output  |
+| ------- | ------- |
+| [1,2,3] | [3,2,1] |
+
+---
+
+# 🧩 Question 11 - Merge Two HashMaps
+
+## Function:
+
+```java
+exercise11_mergeMaps(HashMap<String,Integer> map1, HashMap<String,Integer> map2)
+```
+
+---
+
+### Objective:
+
+Combine two maps into one.
+
+---
+
+### Rules:
+
+* Include all entries
+* If duplicate key exists → second map overrides first
+
+---
+
+### Examples:
+
+| Input                  | Output        |
+| ---------------------- | ------------- |
+| {"A":1}, {"A":2,"B":3} | {"A":2,"B":3} |
+
+---
+
+# 🧩 Question 12 - Invert HashMap (BiMap Concept)
+
+## Function:
+
+```java
+exercise12_invertMap(HashMap<String,Integer> map)
+```
+
+---
+
+### Objective:
+
+Reverse key-value pairs.
+
+---
+
+### Output:
+
+```java
+HashMap<Integer,String>
+```
+
+---
+
+### Examples:
+
+| Input   | Output  |
+| ------- | ------- |
+| {"A":1} | {1:"A"} |
+
+---
+
+### Key Focus:
+
+* Reverse lookups
+* Data transformation
+* BiMap understanding
+
+---
+
+# 🧩 Question 13 - Find Most Frequent Word
+
+## Function:
+
+```java
+exercise13_mostFrequentWord(ArrayList<String> words)
+```
+
+---
+
+### Objective:
+
+Return the most frequent word.
+
+---
+
+### Rules:
+
+* Tie → first encountered
+* Empty list → `""`
+
+---
+
+### Examples:
+
+| Input         | Output |
+| ------------- | ------ |
+| ["a","b","a"] | "a"    |
+
+---
+
+# 🧩 Question 14 - Group Words by Length
+
+## Function:
+
+```java
+exercise14_groupByLength(ArrayList<String> words)
+```
+
+---
+
+### Objective:
+
+Group words by word length.
+
+---
+
+### Output:
+
+```java
+HashMap<Integer, ArrayList<String>>
+```
+
+---
+
+### Example:
+
+```java
+["cat","dog","elephant"]
+```
+
+Returns:
+
+```java
+{
+3: ["cat","dog"],
+8: ["elephant"]
+}
+```
+
+---
+
+# 🧩 Question 15 - Safe Integer Parsing
+
+## Function:
+
+```java
+exercise15_safeParse(String s)
+```
+
+---
+
+### Objective:
+
+Safely parse a string into an Integer.
+
+---
+
+### Rules:
+
+* Valid integer → parsed value
+* Invalid input → `null`
+
+---
+
+### Examples:
+
+| Input | Output |
+| ----- | ------ |
+| "123" | 123    |
+| "abc" | null   |
 
 ---
 
 # 💡 Key Developer Tips
 
-* Always check for null wrappers
-* Collections are object-based
-* ArrayLists preserve order
-* HashMaps provide fast lookup
-* Enums reduce invalid inputs
-* Use loops carefully
-* Think about scalability
-* Build reusable logic
+* Always validate wrapper `null`s
+* Preserve order when required
+* Use defensive coding practices
+* HashMaps are ideal for structured lookups
+* BiMap logic improves reverse indexing
+* Grouping data strengthens architecture
+* Think carefully about scalability
+* Practice clean reusable code
+* Test unusual edge cases
 
 ---
 
 # 🚀 End Goal
 
-By completing this module, you should:
+By completing this expanded module, you should:
 
-* Work with wrapper classes confidently
-* Handle null safely
-* Manipulate ArrayLists effectively
-* Use HashMaps for structured data
-* Build frequency counters
-* Use enums professionally
-* Strengthen enterprise Java foundations
+* Master wrapper classes
+* Build advanced ArrayList solutions
+* Use HashMaps professionally
+* Understand BiMap concepts
+* Build reverse lookup systems
+* Process structured datasets effectively
+* Improve enterprise software readiness
+* Strengthen practical Java engineering confidence
 
 ---
 
 # 🏆 Success Mindset
 
-Modern software development depends heavily on collections, structured data, and safe design.
+Collections are foundational to modern software engineering.
 
-Mastering this module prepares you for:
+Mastering advanced collections prepares you for:
 
 * Backend systems
 * APIs
+* Data engineering
 * Enterprise Java
-* Data processing
+* Search engines
 * Automation
-* Real-world application development
+* Real-world scalable software systems
 
-This module is a major step toward practical software engineering.
+This expanded module represents a major step toward professional-level Java development.
