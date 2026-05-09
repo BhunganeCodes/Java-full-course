@@ -2,66 +2,85 @@
 
 ---
 
-## Learning Outcomes Assessed
+## 🎯 Learning Objectives
 
-* Method Overloading
-* Advanced Loop Control
-* `break` & `continue`
-* Array Traversal
-* Flexible Function Design
-* Iterative Problem Solving
+In this module, you will:
+
+- Understand method overloading
+- Use `break` and `continue` effectively
+- Work confidently with arrays inside loops
+- Build cleaner and more flexible reusable methods
+- Strengthen loop precision and control-flow logic
+- Improve software design through flexible function structures
 
 ---
 
-## Module Structure
+## 🎥 Video Learning Resource
+
+https://youtu.be/xTtL8E4LzTQ
+
+### ⏱ Watch These Sections Only:
+
+- **04:19:51 → 04:30:57**
+- **05:03:26 → 05:28:07**
+
+👉 Watch in parts and practice after each section.
+
+---
+
+# 📚 Learning Outcomes Assessed
+
+- Method Overloading
+- Advanced Loop Control
+- `break` & `continue`
+- Array Traversal
+- Flexible Function Design
+- Iterative Problem Solving
+- Output Formatting
+- Java Syntax Precision
+
+---
+
+# 🛠 Module Structure
 
 This module contains:
 
 ### Coding Practice:
 
-All questions must be completed inside:
+Complete all functions inside:
 
-```java id="k7v4pn"
+```java
 AdvancedLoopExercises.java
 ```
 
-Your task is to:
+---
 
-* Read each overloaded method carefully
-* Understand how parameter differences change behavior
-* Apply correct loop structures
-* Use `break` and `continue` strategically
-* Process arrays safely and accurately
-* Return exact required outputs
-* Pass all tests successfully
+# ✅ What You Must Do
+
+For this module, you must:
+
+- Understand overloaded methods clearly
+- Apply correct loop structures
+- Use `break` and `continue` strategically
+- Process arrays safely
+- Handle formatting carefully
+- Reuse logic where possible
+- Handle edge cases
+- Pass all unit tests successfully
 
 ---
 
-## Your Goal
-
-For each function:
-
-* Use valid Java syntax
-* Understand overloaded methods deeply
-* Control loop flow precisely
-* Handle arrays effectively
-* Prevent formatting mistakes
-* Handle edge cases carefully
-* Ensure all unit tests pass
-
----
-
-## How to Run Your Tests
+# 🧪 How to Run Your Tests
 
 ### Run all tests:
 
-```bash id="f9r2wd"
+```bash
 mvn test
 ```
 
-### Run module tests:
+### Run only this module’s tests:
 
-```bash id="m3x8qz"
+```bash
 mvn test -Dtest=AdvancedLoopExercisesTest
 ```
 
@@ -71,17 +90,13 @@ mvn test -Dtest=AdvancedLoopExercisesTest
 
 ---
 
-## What is Method Overloading?
+## 🔹 What is Method Overloading?
 
 Method overloading allows multiple methods to share the same name while using different parameter lists.
 
-This improves flexibility while keeping related functionality organized.
-
----
-
 ### Example:
 
-```java id="p2j8sm"
+```java
 printNumbers(int n)
 printNumbers(int start, int end)
 printNumbers(int n, String prefix)
@@ -89,15 +104,15 @@ printNumbers(int n, String prefix)
 
 ---
 
-## Why Overloading Matters
+## 🔹 Why Overloading Matters
 
 Method overloading helps developers:
 
-* Reuse logical naming
-* Improve readability
-* Handle multiple input scenarios
-* Build cleaner APIs
-* Reduce unnecessary method names
+- Reuse logical naming
+- Improve readability
+- Handle multiple scenarios
+- Build cleaner APIs
+- Reduce unnecessary method duplication
 
 ---
 
@@ -105,23 +120,23 @@ Method overloading helps developers:
 
 ---
 
-## `break`
+## 🔹 `break`
 
-Stops the loop immediately.
+Stops loop execution immediately.
 
 ---
 
-## `continue`
+## 🔹 `continue`
 
 Skips the current iteration and moves to the next.
 
 ---
 
-## Enhanced For Loop
+## 🔹 Enhanced For Loop
 
 Useful for arrays:
 
-```java id="t8y6vn"
+```java
 for (int num : arr) {
     // process elements
 }
@@ -129,376 +144,272 @@ for (int num : arr) {
 
 ---
 
-# 🧪 Fundamentals Coding Practice
+# 🧪 Exercises
 
 ---
 
-## Project Structure
-
-```plaintext id="d4m7bx"
-module06/
-├── AdvancedLoopExercises.java
-├── tests/
-│   └── AdvancedLoopExercisesTest.java
-└── README.md
-```
-
----
-
-# Question 1 - printNumbers(int n)
+# 🧩 Question 1 - printNumbers(int n)
 
 ## Function:
 
-```java id="x6c9qr"
+```java
 exercise1_printNumbers(int n)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that prints numbers from `1` to `n` while skipping all multiples of `3`.
+### Objective:
 
-This exercise focuses on:
-
-* Basic looping
-* Conditional skipping
-* `continue` usage
-* Output formatting
+Print numbers from `1` to `n`, skipping multiples of `3`.
 
 ---
 
 ### Rules:
 
-* Start from `1`
-* End at `n`
-* Skip numbers divisible by `3`
-* Return remaining numbers as a comma-separated string
-
----
-
-### Input:
-
-* Integer `n`
-
----
-
-### Output:
-
-* Formatted string
+- Use loop
+- Skip numbers divisible by `3`
+- Use `continue`
+- Return comma-separated string
 
 ---
 
 ### Examples:
 
-| Input | Output                 |
-| ----- | ---------------------- |
-| 7     | "1, 2, 4, 5, 7"        |
-| 3     | "1, 2"                 |
-| 10    | "1, 2, 4, 5, 7, 8, 10" |
+| Input | Output |
+|------|--------|
+| `7` | `"1, 2, 4, 5, 7"` |
+| `3` | `"1, 2"` |
+| `10` | `"1, 2, 4, 5, 7, 8, 10"` |
 
 ---
 
 ### Edge Cases:
 
-* `n < 3`
-* Exact multiples of 3
-* Proper comma placement
+- `n < 3`
+- Exact multiples
+- Proper formatting
 
 ---
 
-# Question 2 - printNumbers(int start, int end)
+# 🧩 Question 2 - printNumbers(int start, int end)
 
 ## Function:
 
-```java id="j3w8pt"
+```java
 exercise2_printNumbers(int start, int end)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that prints numbers from `start` to `end`, but immediately stops once the first multiple of `5` is encountered.
+### Objective:
 
-This exercise focuses on:
-
-* Range iteration
-* `break` control
-* Conditional stopping
+Print numbers from `start` to `end`, stopping at first multiple of `5`.
 
 ---
 
 ### Rules:
 
-* Print from `start` to `end`
-* Include the first multiple of `5`
-* Stop immediately afterward
-
----
-
-### Input:
-
-* Integer `start`
-* Integer `end`
-
----
-
-### Output:
-
-* Formatted string
+- Include first multiple of `5`
+- Stop immediately after
+- Use `break`
 
 ---
 
 ### Examples:
 
-| Input  | Output           |
-| ------ | ---------------- |
-| 1, 10  | "1, 2, 3, 4, 5"  |
-| 6, 12  | "6, 7, 8, 9, 10" |
-| 11, 14 | "11, 12, 13, 14" |
+| Input | Output |
+|------|--------|
+| `1, 10` | `"1, 2, 3, 4, 5"` |
+| `6, 12` | `"6, 7, 8, 9, 10"` |
+| `11, 14` | `"11, 12, 13, 14"` |
 
 ---
 
 ### Edge Cases:
 
-* First number is multiple of 5
-* No multiples of 5 in range
-* Reverse or invalid ranges depending on tests
+- First number multiple of `5`
+- No multiples
+- Invalid ranges depending on tests
 
 ---
 
-# Question 3 - printNumbers(int n, String prefix)
+# 🧩 Question 3 - printNumbers(int n, String prefix)
 
 ## Function:
 
-```java id="y4m7sv"
+```java
 exercise3_printNumbers(int n, String prefix)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that prints numbers from `1` to `n`, skipping all even numbers, while adding a prefix before each printed value.
+### Objective:
 
-This exercise focuses on:
-
-* Method overloading
-* Odd/even filtering
-* String formatting
+Print odd numbers from `1` to `n` with prefix.
 
 ---
 
 ### Rules:
 
-* Print only odd numbers
-* Skip even numbers
-* Prefix each number
-
----
-
-### Input:
-
-* Integer `n`
-* String `prefix`
-
----
-
-### Output:
-
-* Formatted string
+- Skip even numbers
+- Prefix each valid number
+- Return comma-separated string
 
 ---
 
 ### Examples:
 
-| Input     | Output                |
-| --------- | --------------------- |
-| 5, "#"    | "#1, #3, #5"          |
-| 6, "Num-" | "Num-1, Num-3, Num-5" |
+| Input | Output |
+|------|--------|
+| `5, "#"` | `"#1, #3, #5"` |
+| `6, "Num-"` | `"Num-1, Num-3, Num-5"` |
 
 ---
 
 ### Edge Cases:
 
-* `n < 1`
-* Empty prefix
-* Proper formatting
+- Empty prefix
+- `n < 1`
+- Formatting
 
 ---
 
-# Question 4 - printArray(int[] arr)
+# 🧩 Question 4 - printArray(int[] arr)
 
 ## Function:
 
-```java id="r7v3lx"
+```java
 exercise4_printArray(int[] arr)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that processes an integer array while skipping all negative numbers.
+### Objective:
 
-This exercise focuses on:
-
-* Array traversal
-* Conditional filtering
-* Enhanced loops
+Print all non-negative numbers in array.
 
 ---
 
 ### Rules:
 
-* Skip negative numbers
-* Include zero and positive numbers
-* Return valid numbers as comma-separated string
-
----
-
-### Input:
-
-* Integer array
-
----
-
-### Output:
-
-* Formatted string
+- Skip negatives
+- Include zero
+- Return comma-separated string
 
 ---
 
 ### Examples:
 
-| Input         | Output    |
-| ------------- | --------- |
-| [1, -2, 3, 4] | "1, 3, 4" |
-| [-1, -5, 2]   | "2"       |
-| [0, 5]        | "0, 5"    |
+| Input | Output |
+|------|--------|
+| `[1, -2, 3, 4]` | `"1, 3, 4"` |
+| `[-1, -5, 2]` | `"2"` |
+| `[0, 5]` | `"0, 5"` |
 
 ---
 
 ### Edge Cases:
 
-* Empty arrays
-* All negative values
-* Zero values
+- Empty array
+- All negatives
+- Zero values
 
 ---
 
-# Question 5 - printArray(int[] arr, int threshold)
+# 🧩 Question 5 - printArray(int[] arr, int threshold)
 
 ## Function:
 
-```java id="v5q2tw"
+```java
 exercise5_printArray(int[] arr, int threshold)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that prints array values only while they remain below a specified threshold.
+### Objective:
 
-Once a value equal to or greater than the threshold is encountered, processing stops immediately.
+Print values below threshold until threshold reached.
 
 ---
 
 ### Rules:
 
-* Print numbers below threshold
-* Stop at first value ≥ threshold
-* Do not include stopping value
-
----
-
-### Input:
-
-* Integer array
-* Integer threshold
-
----
-
-### Output:
-
-* Formatted string
+- Stop at first value `>= threshold`
+- Do not include stopping value
+- Use `break`
 
 ---
 
 ### Examples:
 
-| Input                          | Output    |
-| ------------------------------ | --------- |
-| [1, 2, 3, 7, 4], threshold = 5 | "1, 2, 3" |
-| [2, 4, 6], threshold = 6       | "2, 4"    |
-| [10, 1], threshold = 5         | ""        |
+| Input | Output |
+|------|--------|
+| `[1, 2, 3, 7, 4], threshold = 5` | `"1, 2, 3"` |
+| `[2, 4, 6], threshold = 6` | `"2, 4"` |
+| `[10, 1], threshold = 5` | `""` |
 
 ---
 
 ### Edge Cases:
 
-* Threshold encountered immediately
-* No threshold break
-* Empty arrays
+- Immediate threshold
+- No threshold hit
+- Empty array
 
 ---
 
-# Question 6 - printArray(String[] arr, String prefix)
+# 🧩 Question 6 - printArray(String[] arr, String prefix)
 
 ## Function:
 
-```java id="u9p4dk"
+```java
 exercise6_printArray(String[] arr, String prefix)
 ```
 
-### Detailed Objective:
+---
 
-Create a method that processes string arrays while skipping any entries that begin with `"ignore"`.
+### Objective:
 
-All valid entries should include the provided prefix.
+Print strings while skipping entries starting with `"ignore"`.
 
 ---
 
 ### Rules:
 
-* Skip strings starting with `"ignore"`
-* Prefix all others
-* Return formatted string
-
----
-
-### Input:
-
-* String array
-* String prefix
-
----
-
-### Output:
-
-* Formatted string
+- Skip strings beginning with `"ignore"`
+- Add prefix to valid strings
+- Return formatted string
 
 ---
 
 ### Examples:
 
-| Input                                    | Output            |
-| ---------------------------------------- | ----------------- |
-| ["apple", "ignoreBanana", "carrot"], "*" | "*apple, *carrot" |
-| ["ignoreThis", "hello"], "#"             | "#hello"          |
+| Input | Output |
+|------|--------|
+| `["apple", "ignoreBanana", "carrot"], "*"` | `"*apple, *carrot"` |
+| `["ignoreThis", "hello"], "#"` | `"#hello"` |
 
 ---
 
 ### Edge Cases:
 
-* All ignored entries
-* Empty arrays
-* Empty prefix
-* Mixed capitalization depending on tests
+- All ignored
+- Empty arrays
+- Empty prefix
+- Mixed capitalization depending on tests
 
 ---
 
 # 💡 Key Developer Tips
 
-* Understand overload signatures clearly
-* Use `continue` for skipping
-* Use `break` for stopping
-* Be careful with formatting commas
-* Validate array boundaries
-* Reuse logic when possible
-* Test each overloaded version independently
+- Understand overload signatures clearly
+- Use `continue` for skipping
+- Use `break` for stopping
+- Be careful with comma placement
+- Validate array boundaries
+- Reuse logic strategically
+- Test each overloaded version independently
+- Practice formatting precision
 
 ---
 
@@ -506,17 +417,24 @@ All valid entries should include the provided prefix.
 
 By completing this module, you should:
 
-* Understand method overloading confidently
-* Master advanced loop controls
-* Process arrays effectively
-* Build flexible reusable functions
-* Improve control-flow precision
-* Strengthen software design patterns
+- Understand method overloading deeply
+- Control loops with precision
+- Process arrays confidently
+- Build flexible reusable functions
+- Improve software architecture habits
+- Strengthen real-world programming skills
 
 ---
 
 # 🏆 Success Mindset
 
-Professional developers constantly combine loops, arrays, and overloaded methods to create scalable systems.
+Advanced loops and method overloading are used heavily in:
 
-Mastering these concepts will significantly improve your coding versatility and software engineering foundation.
+- Backend systems
+- APIs
+- Automation tools
+- Data pipelines
+- Enterprise software
+- Large-scale applications
+
+Mastering these concepts greatly improves your versatility as a developer.
