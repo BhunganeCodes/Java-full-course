@@ -22,7 +22,7 @@ In this module, you will:
 ---
 
 ## 🎥 Video Learning Resources
-
+![img.png](img.png)
 ### Main Java Course:
 
 https://youtu.be/xTtL8E4LzTQ
