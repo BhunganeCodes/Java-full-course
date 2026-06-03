@@ -5,7 +5,8 @@ public class Exercise2_AgeVerification {
     public static void main(String[] args) {
         int age = 18;
 
-        // Write your code below
+        if (age >= 18) System.out.println("Access granted");
+        else System.out.println("Access denied");
 
     }
 }
