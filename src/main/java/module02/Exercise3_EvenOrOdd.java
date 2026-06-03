@@ -5,7 +5,9 @@ public class Exercise3_EvenOrOdd {
     public static void main(String[] args) {
         int number = 7;
 
-        // Write your code below
+        if (number % 2 == 0) System.out.printf("%d is even%n", number);
+        else System.out.printf("%d is odd%n", number);
+
 
     }
 }
