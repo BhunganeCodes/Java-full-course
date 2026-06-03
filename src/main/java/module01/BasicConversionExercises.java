@@ -34,10 +34,7 @@ public class BasicConversionExercises {
 
     // Exercise 7
     public static String exercise7_getFirstChar(String text) {
-        if (text.isEmpty() || text == null) return text;
-
-        char[] res = text.toCharArray();
-
-        return Character.toString(res[0]);
+        if (!text.isEmpty()) return String.valueOf(text.toCharArray()[0]);
+        else return "";
     }
 }
