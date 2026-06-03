@@ -2,108 +2,150 @@
 
 ---
 
-## 🎯 Learning Objectives
+## 🎯 Learning Objectives / Outcomes
 
-In this module, you will:
+In this module, you will learn:
 
-* Understand UDP communication
-* Send and receive datagrams
-* Compare TCP vs UDP
+* UDP Networking Fundamentals
+* Datagram Communication
+* Connectionless Protocol Behavior
+* DatagramSocket Usage
+* DatagramPacket Usage
+* Sending and Receiving Packets
+* Network Communication Models
+* TCP vs UDP Comparison
+* Lightweight Network Messaging
+* Real-time system communication principles
 
 ---
 
-## 🎥 Video Sections
+## 🎥 Video Section
 
 https://youtu.be/A5fFxs_DUsQ
 
-### ⏱ Watch:
+### ⏱ Watch Instructions:
 
-* First ~5 minutes (UDP basics)
+* First ~5 minutes
+* Focus on:
+  * UDP basics
+  * Connectionless communication
+  * Datagram behavior
 
 ---
 
-## 🧠 Key Concepts
+## 🧠 Core UDP Concepts
 
-### 🔹 UDP Socket
+### 🔹 What is UDP?
 
-```java
-DatagramSocket socket = new DatagramSocket();
-```
+UDP (User Datagram Protocol) is a fast, connectionless protocol used for lightweight communication.
 
-### 🔹 Sending Packet
+---
 
-```java
-DatagramPacket packet = new DatagramPacket(data, data.length, address, port);
-socket.send(packet);
-```
+### Key Characteristics:
 
-### 🔹 Receiving Packet
+* Connectionless
+* Fast
+* No delivery guarantee
+* No ordering guarantee
 
-```java
-socket.receive(packet);
-```
+---
+
+### Real-World Uses:
+
+* Gaming
+* Streaming
+* VoIP
+* DNS requests
+
+---
+
+## 🔹 UDP vs TCP
+
+| Feature | TCP | UDP |
+|--------|-----|-----|
+| Connection | Yes | No |
+| Reliability | High | Low |
+| Speed | Slower | Faster |
+
+---
+
+## 🔹 Java UDP Components
+
+### Socket:
+    DatagramSocket
+
+### Packet:
+    DatagramPacket
+
+### Example:
+    DatagramSocket socket = new DatagramSocket();
+
+    DatagramPacket packet =
+        new DatagramPacket(data, data.length, address, port);
+
+    socket.send(packet);
+    socket.receive(packet);
+
+---
+
+## 📁 Project Structure
+
+    module15/
+    ├── UDPSocketExercises.java
+    ├── tests/
+    │   └── UDPSocketExercisesTest.java
+    └── README.md
 
 ---
 
 ## 🧪 Exercises
 
-👉 Implement all methods in:
+Implement:
 
-UDPSocketExercises.java
-
----
-
-### 🧩 Exercise 1: Create UDP Socket
-
-* Create a DatagramSocket
-* Return: "Socket created"
+    UDPSocketExercises.java
 
 ---
 
-### 🧩 Exercise 2: Send Packet
-
-* Simulate sending "Hello UDP"
-* Return: "Packet sent"
-
----
-
-### 🧩 Exercise 3: Receive Packet
-
-* Simulate receiving data
-* Return: "Packet received"
+### 🧩 Exercise 1
+Return:
+    Socket created
 
 ---
 
-### 🧩 Exercise 4: Connectionless Concept
-
-* Return: "No connection needed"
-
----
-
-### 🧩 Exercise 5: UDP Communication
-
-* Simulate send + receive
-* Return: "Hello UDP"
+### 🧩 Exercise 2
+Return:
+    Packet sent
 
 ---
 
-## ✅ What You Must Do
-
-* Implement all methods
-* Use DatagramSocket and DatagramPacket
-
-Run:
-mvn test
+### 🧩 Exercise 3
+Return:
+    Packet received
 
 ---
 
-## 💡 Tips
+### 🧩 Exercise 4
+Return:
+    No connection needed
 
-* UDP is connectionless
-* Faster but unreliable
+---
+
+### 🧩 Exercise 5
+Return:
+    Hello UDP
 
 ---
 
 ## 🚀 Goal
 
-* Understand UDP and how it differs from TCP
+Understand UDP, DatagramSocket, and connectionless communication.
+
+---
+
+## 🧪 Run Tests
+
+    mvn test
+
+or
+
+    mvn test -Dtest=UDPSocketExercisesTest

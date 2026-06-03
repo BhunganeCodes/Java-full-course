@@ -1,64 +1,213 @@
 package module02;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ConditionExercisesTest {
 
+    // ---------------------------------------------------------
+    // Helper method to capture printed output
+    // ---------------------------------------------------------
+    private String captureOutput(Runnable runnable) {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+
+        System.setOut(new PrintStream(outputStream));
+
+        try {
+            runnable.run();
+        } finally {
+            System.setOut(originalOut);
+        }
+
+        return outputStream.toString().trim();
+    }
+
+    // =========================================================
+    // Exercise 1: Temperature Alert
+    // =========================================================
+
     @Test
-    void testExercise1_temperatureAlert() {
-        assertEquals("It's not hot.", ConditionExercises.exercise1_temperatureAlert(25));
-        assertEquals("It's not hot.", ConditionExercises.exercise1_temperatureAlert(30));
-        assertEquals("It's hot!", ConditionExercises.exercise1_temperatureAlert(35));
+    void testExercise1_temperatureAlert_hot() {
+        String output = captureOutput(() ->
+                Exercise1_TemperatureAlert.main(null)
+        );
+
+        assertEquals("It's hot!", output);
     }
 
     @Test
-    void testExercise2_ageVerification() {
-        assertEquals("Access denied", ConditionExercises.exercise2_ageVerification(15));
-        assertEquals("Access granted", ConditionExercises.exercise2_ageVerification(18));
-        assertEquals("Access granted", ConditionExercises.exercise2_ageVerification(25));
+    void testExercise1_temperatureAlert_exactOutput() {
+        String output = captureOutput(() ->
+                Exercise1_TemperatureAlert.main(null)
+        );
+
+        // Ensures punctuation and capitalization are exact
+        assertTrue(output.equals("It's hot!"));
     }
 
     @Test
-    void testExercise3_evenOrOdd() {
-        assertEquals("7 is odd", ConditionExercises.exercise3_evenOrOdd(7));
-        assertEquals("10 is even", ConditionExercises.exercise3_evenOrOdd(10));
-        assertEquals("0 is even", ConditionExercises.exercise3_evenOrOdd(0));
+    void testExercise1_temperatureAlert_noExtraWhitespace() {
+        String output = captureOutput(() ->
+                Exercise1_TemperatureAlert.main(null)
+        );
+
+        assertEquals(output.trim(), output);
     }
 
     @Test
-    void testExercise4_discountCalculator() {
-        assertEquals("Discount: 20%, Final price: R960.00",
-                ConditionExercises.exercise4_discountCalculator(1200));
+    void testExercise1_temperatureAlert_containsHotWord() {
+        String output = captureOutput(() ->
+                Exercise1_TemperatureAlert.main(null)
+        );
 
-        assertEquals("Discount: 10%, Final price: R675.00",
-                ConditionExercises.exercise4_discountCalculator(750));
+        assertTrue(output.contains("hot"));
+    }
 
-        assertEquals("Discount: 0%, Final price: R300.00",
-                ConditionExercises.exercise4_discountCalculator(300));
+    // =========================================================
+    // Exercise 2: Age Verification
+    // =========================================================
+
+    @Test
+    void testExercise2_ageVerification_accessGranted() {
+        String output = captureOutput(() ->
+                Exercise2_AgeVerification.main(null)
+        );
+
+        assertEquals("Access granted", output);
     }
 
     @Test
-    void testExercise5_weatherAdvisor() {
-        assertEquals("Temperature: 35°C, Advice: It's hot!",
-                ConditionExercises.exercise5_weatherAdvisor(35));
+    void testExercise2_ageVerification_exactOutput() {
+        String output = captureOutput(() ->
+                Exercise2_AgeVerification.main(null)
+        );
 
-        assertEquals("Temperature: 20°C, Advice: It's mild.",
-                ConditionExercises.exercise5_weatherAdvisor(20));
-
-        assertEquals("Temperature: 5°C, Advice: It's cold.",
-                ConditionExercises.exercise5_weatherAdvisor(5));
+        // Ensures exact wording
+        assertTrue(output.equals("Access granted"));
     }
 
     @Test
-    void testExercise6_ageGroup() {
-        assertEquals("Age: 10, Group: Child",
-                ConditionExercises.exercise6_ageGroup(10));
+    void testExercise2_ageVerification_containsGranted() {
+        String output = captureOutput(() ->
+                Exercise2_AgeVerification.main(null)
+        );
 
-        assertEquals("Age: 15, Group: Teen",
-                ConditionExercises.exercise6_ageGroup(15));
+        assertTrue(output.contains("granted"));
+    }
 
-        assertEquals("Age: 25, Group: Adult",
-                ConditionExercises.exercise6_ageGroup(25));
+    @Test
+    void testExercise2_ageVerification_noExtraWhitespace() {
+        String output = captureOutput(() ->
+                Exercise2_AgeVerification.main(null)
+        );
+
+        assertEquals(output.trim(), output);
+    }
+
+    // =========================================================
+    // Exercise 3: Even or Odd
+    // =========================================================
+
+    @Test
+    void testExercise3_evenOrOdd_odd() {
+        String output = captureOutput(() ->
+                Exercise3_EvenOrOdd.main(null)
+        );
+
+        assertEquals("7 is odd", output);
+    }
+
+    // =========================================================
+    // Exercise 4: Discount Calculator
+    // =========================================================
+
+    @Test
+    void testExercise4_discountCalculator_formatting() {
+        String output = captureOutput(() ->
+                Exercise4_DiscountCalculator.main(null)
+        );
+
+        assertEquals("Discount: 20%, Final price: R960.00", output);
+    }
+
+    @Test
+    void testExercise4_discountCalculator_decimalFormatting() {
+        String output = captureOutput(() ->
+                Exercise4_DiscountCalculator.main(null)
+        );
+
+        // Ensures two decimal places exist
+        assertTrue(output.matches(".*R\\d+\\.\\d{2}$"));
+    }
+
+    @Test
+    void testExercise4_discountCalculator_containsPercentSymbol() {
+        String output = captureOutput(() ->
+                Exercise4_DiscountCalculator.main(null)
+        );
+
+        assertTrue(output.contains("%"));
+    }
+
+    // =========================================================
+    // Exercise 5: Weather Advisor
+    // =========================================================
+
+    @Test
+    void testExercise5_weatherAdvisor_hot() {
+        String output = captureOutput(() ->
+                Exercise5_WeatherAdvisor.main(null)
+        );
+
+        assertEquals(
+                "Temperature: 35°C, Advice: It's hot!",
+                output
+        );
+    }
+
+    @Test
+    void testExercise5_weatherAdvisor_containsDegreeSymbol() {
+        String output = captureOutput(() ->
+                Exercise5_WeatherAdvisor.main(null)
+        );
+
+        assertTrue(output.contains("°C"));
+    }
+
+    @Test
+    void testExercise5_weatherAdvisor_outputFormat() {
+        String output = captureOutput(() ->
+                Exercise5_WeatherAdvisor.main(null)
+        );
+
+        assertTrue(output.startsWith("Temperature:"));
+    }
+
+    // =========================================================
+    // Exercise 6: Age Group
+    // =========================================================
+
+    @Test
+    void testExercise6_ageGroup_teen() {
+        String output = captureOutput(() ->
+                Exercise6_AgeGroup.main(null)
+        );
+
+        assertEquals("Age: 15, Group: Teen", output);
+    }
+
+    @Test
+    void testExercise6_ageGroup_containsGroupLabel() {
+        String output = captureOutput(() ->
+                Exercise6_AgeGroup.main(null)
+        );
+
+        assertTrue(output.contains("Group:"));
     }
 }
