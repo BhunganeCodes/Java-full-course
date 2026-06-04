@@ -15,7 +15,7 @@ public class MethodExercisesTest {
     @Test
     void testExercise2_greetUser() {
         assertEquals("Hello, Alice!", MethodExercises.exercise2_greetUser("Alice"));
-        assertEquals("Hello, ", MethodExercises.exercise2_greetUser(""));
+        assertEquals("Hello, !", MethodExercises.exercise2_greetUser(""));
     }
 
     @Test
